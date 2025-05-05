@@ -1,9 +1,9 @@
 import os
 import requests
 import logging
-import base64 # Add base64 import
-from datetime import datetime # Add datetime import
-from pathlib import Path # Add Path import
+import base64
+from datetime import datetime
+from pathlib import Path 
 from typing import List, Dict, Any, Optional, Union
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
@@ -11,11 +11,6 @@ from dotenv import load_dotenv
 from stepfun_mcp.const import (
     ENV_STEPFUN_API_KEY,
     ENV_STEPFUN_API_HOST,
-    # DEFAULT_TEXT_MODEL, # Will use specific models from examples
-    # DEFAULT_VISION_MODEL,
-    # DEFAULT_IMAGE_MODEL,
-    # DEFAULT_SPEECH_MODEL,
-    # DEFAULT_VOICE_ID,
 )
 from stepfun_mcp.exceptions import StepFunAPIError, StepFunAuthError, StepFunRequestError
 
@@ -355,12 +350,12 @@ if __name__ == "__main__":
             print("\nTesting Vision Completion...")
             # NOTE: Replace with a real image data URI for actual testing
             # You might need a helper function to load an image file and convert to base64 data URI
-            dummy_image_data_uri = "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/f0/59/f1f059d0-8090-66bc-2e7a-56610f7bad66/AppIcon-85-220-5-0-0-2x-0-0.png/512x512bb.png"
+            dummy_image_data_uri = "https://pic3.zhimg.com/v2-aad0f6de13653215f265e72f51b236ba_1440w.jpg"
             vision_req = ChatCompletionRequest(
                  model="step-1v-8k", # From example
                  messages=[
                      VisionMessage(role="user", content=[
-                         VisionContentPartText(text="Describe this image."),
+                         VisionContentPartText(text="详细介绍一下这张图片"),
                          VisionContentPartImage(image_url={"url": dummy_image_data_uri})
                      ])
                  ]

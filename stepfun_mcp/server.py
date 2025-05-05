@@ -145,7 +145,6 @@ def stepfun_text2speech(
         req = SpeechGenerationRequest(model=model, input=text, voice=voice)
         audio_bytes = client.create_speech_generation(req)
         if resource_mode == RESOURCE_MODE_URL:
-            # 假设API直接返回URL（如无此能力可删去）
             return TextContent(type="text", text="StepFun 暂不支持语音URL返回，请使用本地模式")
         else:
             output_path = build_output_path(output_directory, base_path)

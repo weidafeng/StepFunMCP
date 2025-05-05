@@ -13,9 +13,7 @@ RESOURCE_MODE_URL = "url"
 
 # Default values (adjust based on StepFun API defaults or desired behavior)
 DEFAULT_TEXT_MODEL = "step-1-8k" 
-DEFAULT_VISION_MODEL = "cogvlm-chat" 
-DEFAULT_IMAGE_MODEL = "step-1x-medium" # Example
-DEFAULT_SPEECH_MODEL = "step-tts-mini" # Example
-DEFAULT_VOICE_ID = "cixingnansheng" # Example
-
-# Add other constants as needed
+DEFAULT_VISION_MODEL = "step-1v-8k" 
+DEFAULT_IMAGE_MODEL = "step-1x-medium" 
+DEFAULT_SPEECH_MODEL = "step-tts-mini" 
+DEFAULT_VOICE_ID = "cixingnansheng" 
