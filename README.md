@@ -27,6 +27,7 @@ pip install stepfun-mcp
 2. **配置mcp server config**
 
 可参考：[mcp_server_config_uvx_demo.json](mcp_server_config_uvx_demo.json) 或者 [mcp_server_config_demo.json](mcp_server_config_demo.json)
+
 ```json
 {
   "mcpServers": {
@@ -43,6 +44,7 @@ pip install stepfun-mcp
     }
   }
 }
+```
 
 ## 交流
 
