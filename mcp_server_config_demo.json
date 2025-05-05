@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "StepFun": {
+      "command": "stepfun-mcp",
+      "args": [
+      ],
+      "env": {
+        "STEPFUN_API_KEY": "YOUR_STEPFUN_API_KEY_HERE",
+        "STEPFUN_API_HOST": "https://api.stepfun.com",
+        "STEPFUN_MCP_BASE_PATH": "YOUR_OUTPUT_DIR", 
+        "STEPFUN_API_RESOURCE_MODE": "local"
+      }
+    }
+  }
+}

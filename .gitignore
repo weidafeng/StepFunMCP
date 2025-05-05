@@ -1,0 +1,26 @@
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+
+.env
+.venv
+.cursor
+.cursorignore
+dist/
+stepfun_mcp_output/ # Or your STEPFUN_MCP_BASE_PATH if local
+.coverage
+.dotenv
+.pytest_cache/
+__pycache__/
+*.egg-info/
+*.egg
+build/
+htmlcov/
+logs/
+*.log
+coverage.xml
+test_outputs/
+MiniMax-MCP/

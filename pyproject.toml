@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stepfun-mcp"
+version = "0.0.1"
+description = "StepFun MCP Server"
+authors = [
+    # Add your name and email here
+    { name = "Your Name", email = "your.email@example.com" },
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = [
+    "stepfun",
+    "mcp",
+    "text-generation",
+    "vision",
+    "image-generation",
+    "speech",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.6.0", # Assuming MCP library is used - CHANGE TO fastmcp
+    "fastapi>=0.109.2", # Or latest compatible version
+    "uvicorn>=0.27.1", # Or latest compatible version
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.6.1",
+    "requests>=2.31.0", # For making API calls
+    "fastmcp>=0.1.0", # ADD fastmcp dependency (adjust version as needed)
+    "Pillow>=10.0.0", # ADD Pillow for image processing
+    "python-Levenshtein",
+    "fuzzywuzzy",
+    "openai",
+    # Add any other specific dependencies StepFun might need
+]
+
+[project.scripts]
+stepfun-mcp = "stepfun_mcp.server:main" # Entry point for the server
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    # Add other development tools
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=stepfun_mcp --cov-report=term-missing"
+
+# Add ruff or other linter/formatter configurations if desired
+[tool.ruff]
+# ...
+
+[tool.setuptools.packages.find]
+include = ["stepfun_mcp"]
+exclude = ["test_outputs"]
