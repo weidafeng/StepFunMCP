@@ -48,8 +48,9 @@ pip install stepfun-mcp
 
 ## 交流
 
-欢迎关注
+本文持续关注VLM、LLM在具身智能、Agent中的应用，欢迎交流。
 - 公众号：[特里斯丹](公众号-特里斯丹.png)
 - 知乎：[特里斯丹](https://www.zhihu.com/people/wwdafg)
+
 
 ![](公众号-特里斯丹.png)
