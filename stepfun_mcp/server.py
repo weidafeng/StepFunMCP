@@ -100,7 +100,7 @@ def stepfun_vision_completion(
 
 # 文生图
 @mcp.tool(
-    description="调用 StepFun 文生图模型生成图片。\nArgs:\n  prompt (str): 文本描述\n  model (str, optional): 模型名称，默认 step-1x-medium。\n  n (int, optional): 生成图片数量，默认1。\n  size (str, optional): 图片尺寸。\n  seed (int, optional): 随机种子。\nReturns:\n  ImageContent: 图片内容"
+    description="调用 StepFun 文生图模型生成图片。\nArgs:\n  prompt (str): 文本描述\n  model (str, optional): 模型名称，默认 step-1x-medium。\n  n (int, optional): 生成图片数量，默认1。\n  size (str, optional): 图片尺寸。\n  seed (int, optional): 随机种子。\nReturns:\n  TextContent: 图片存储的文件路径"
 )
 def stepfun_text2img(
     prompt: str,
